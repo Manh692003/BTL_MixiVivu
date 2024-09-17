@@ -2,4 +2,16 @@
     <string name="app_name">MixiVivu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="filterDestination">
+        <item>Tất cả địa điểm</item>
+        <item>Vịnh Hạ Long</item>
+        <item>Vịnh Lan Hạ</item>
+        <item>Đảo Cát Bà</item>
+    </string-array>
+    <string-array name="filterPrice">
+        <item>Tất cả mức giá</item>
+        <item>Từ 1tr đến 3tr</item>
+        <item>Từ 3tr đến 6tr</item>
+        <item>Trên 6tr</item>
+    </string-array>
 </resources>
