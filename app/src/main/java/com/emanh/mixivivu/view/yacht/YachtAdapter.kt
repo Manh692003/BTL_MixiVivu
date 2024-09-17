@@ -47,7 +47,7 @@ class YachtAdapter(private val items: MutableList<YachtModel>)
         holder.binding.title.text = "Du thuyền ${items[position].title}"
         holder.binding.location.text = items[position].location
         holder.binding.price.text = "${formatPrice(items[position].price)}đ / khách"
-        holder.binding.textEvaluate.text = "$formattedRating (${countReview} đánh giá) asdf asdf"
+        holder.binding.textEvaluate.text = "$formattedRating (${countReview} đánh giá)"
 
         holder.itemView.setOnClickListener {
             val intent = Intent(holder.itemView.context, DetailYachtActivity::class.java)
