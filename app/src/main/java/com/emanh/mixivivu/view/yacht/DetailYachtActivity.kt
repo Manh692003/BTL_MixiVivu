@@ -116,6 +116,7 @@ class DetailYachtActivity : BaseActivity() {
 
         fragmentTransaction.replace(R.id.frameLayoutDetail, fragment)
         fragmentTransaction.commit()
+        // commit
     }
 
     private fun formatPrice(price: Int): String {
