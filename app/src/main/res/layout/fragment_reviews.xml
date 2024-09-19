@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/bg_light_blue3"
+    android:padding="1dp"
+    tools:context=".view.detailYacht.ReviewsFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_white3"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/textViewTitle"
+            android:text="@string/evaluation" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/heading_border"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/textViewContentBold"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_view_review_service" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_input1"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textViewContent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:gravity="center"
+                android:text="@string/rating" />
+
+            <RatingBar
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:progressDrawable="@drawable/star_rating" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/inputYourName"
+            style="@style/editText"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_white_input1"
+            android:drawableStart="@drawable/name"
+            android:drawableTint="@color/darkBlue"
+            android:hint="@string/input_your_name"
+            android:importantForAutofill="no"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/inputContentReview"
+            style="@style/editText"
+            android:layout_height="130dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_white_selected"
+            android:gravity="top"
+            android:hint="@string/input_your_review"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLength="255"
+            android:maxLines="6" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_light_blue1"
+            android:padding="1dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sendReviews"
+                style="@style/buttonWhite"
+                android:text="@string/send_reviews"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:srcCompat="@drawable/heading_border"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/textViewContentBold"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_view_reviews_user" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoIntro">
+
+            <ProgressBar
+                android:id="@+id/progressEvaluation"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listEvaluation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.core.widget.NestedScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</FrameLayout>

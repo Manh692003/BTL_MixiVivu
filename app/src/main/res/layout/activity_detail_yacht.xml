@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.yacht.DetailYachtActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="36dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/textViewTitle"
+                android:id="@+id/title"
+                android:layout_marginTop="68dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/title">
+
+                <LinearLayout
+                    android:id="@+id/layoutEvaluate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="8dp"
+                    android:background="@drawable/bg_yellow1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:importantForAccessibility="no"
+                        app:srcCompat="@drawable/star"
+                        app:tint="@color/orange" />
+
+                    <TextView
+                        style="@style/textViewContent"
+                        android:id="@+id/infoEvaluate"
+                        android:layout_marginStart="8dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/textViewTitle"
+                    android:id="@+id/price"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutPicMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="1dp"
+                android:background="@drawable/bg_light_blue4"
+                app:layout_constraintTop_toBottomOf="@+id/layoutIntro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/picMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="224dp"
+                    android:scaleType="centerCrop"
+                    android:importantForAccessibility="no"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+            </FrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listPic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_light_grey1"
+                android:clipToPadding="false"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/layoutPicMain"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <FrameLayout
+                android:id="@+id/layoutInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="1dp"
+                android:background="@drawable/bg_light_blue3"
+                app:layout_constraintTop_toBottomOf="@id/listPic">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_white3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textViewTitle"
+                        android:id="@+id/infoShip"
+                        android:text="@string/info_ship"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"/>
+
+                    <View
+                        android:id="@+id/viewInfoShip"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/lightBlue"
+                        android:layout_marginTop="8dp"/>
+
+                    <include
+                        layout="@layout/information_detail_yacht"
+                        android:id="@+id/launching"/>
+
+                    <include
+                        layout="@layout/information_detail_yacht"
+                        android:id="@+id/cabin"/>
+
+                    <include
+                        layout="@layout/information_detail_yacht"
+                        android:id="@+id/body"/>
+
+                    <include
+                        layout="@layout/information_detail_yacht"
+                        android:id="@+id/trip"/>
+
+                    <include
+                        layout="@layout/information_detail_yacht"
+                        android:id="@+id/operating"/>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutListButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_light_grey1"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/layoutInfo">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/buttonWhite2"
+                    android:id="@+id/characteristic"
+                    android:text="@string/characteristic" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/buttonWhite2"
+                    android:id="@+id/priceRoom"
+                    android:text="@string/price_room" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/buttonWhite2"
+                    android:id="@+id/intro"
+                    android:text="@string/intro" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/buttonWhite2"
+                    android:id="@+id/evaluation"
+                    android:text="@string/evaluation" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameLayoutDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/layoutListButton"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:srcCompat="@drawable/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
