@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package com.emanh.mixivivu.view.reviews
+package com.emanh.mixivivu.view.detailYacht
 
 import android.content.Context
 import android.os.Bundle

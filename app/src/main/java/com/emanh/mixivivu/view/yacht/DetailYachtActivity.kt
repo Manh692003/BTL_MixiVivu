@@ -16,7 +16,9 @@ import com.emanh.mixivivu.model.InformationYachtModel
 import com.emanh.mixivivu.model.YachtModel
 import com.emanh.mixivivu.view.BaseActivity
 import com.emanh.mixivivu.view.booking.PriceRoomFragment
-import com.emanh.mixivivu.view.reviews.ReviewsFragment
+import com.emanh.mixivivu.view.detailYacht.CharacteristicFragment
+import com.emanh.mixivivu.view.detailYacht.IntroFragment
+import com.emanh.mixivivu.view.detailYacht.ReviewsFragment
 import com.emanh.mixivivu.viewModel.ReviewsViewModel
 import java.text.NumberFormat
 import java.util.Locale
