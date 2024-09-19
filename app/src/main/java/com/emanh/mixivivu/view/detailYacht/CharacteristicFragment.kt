@@ -24,7 +24,7 @@ class CharacteristicFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentCharacteristicBinding.inflate(inflater, container, false)
 
         initListHighlights()
