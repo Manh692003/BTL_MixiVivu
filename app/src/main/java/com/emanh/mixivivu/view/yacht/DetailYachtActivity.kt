@@ -116,7 +116,7 @@ class DetailYachtActivity : BaseActivity() {
 
         fragmentTransaction.replace(R.id.frameLayoutDetail, fragment)
         fragmentTransaction.commit()
-        // commit
+        // Kakjshd
     }
 
     private fun formatPrice(price: Int): String {
