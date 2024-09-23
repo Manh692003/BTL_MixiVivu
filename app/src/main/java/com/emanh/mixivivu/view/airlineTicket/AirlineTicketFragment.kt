@@ -37,7 +37,6 @@ class AirlineTicketFragment : Fragment() {
         return binding.root
     }
 
-
     private fun initVideoIntro() {
         val videoPath = "android.resource://" + context?.packageName + "/" + R.raw.mixivivu_plane
         binding.videoIntro.setVideoURI(Uri.parse(videoPath))
@@ -94,7 +93,6 @@ class AirlineTicketFragment : Fragment() {
 
     private fun String.toast() {
         Toast.makeText(requireContext(), this, Toast.LENGTH_LONG).show()
-//
     }
 
     private fun validate(): Boolean {
@@ -159,7 +157,6 @@ class AirlineTicketFragment : Fragment() {
         }
 
         return true
-//
     }
 
     private fun showDatePickerDialog(editText: EditText) {
@@ -178,11 +175,9 @@ class AirlineTicketFragment : Fragment() {
             calendar.get(Calendar.DAY_OF_MONTH)
         )
         datePickerDialog.show()
-//
     }
 
     private fun removeText(input: String): String {
         return input.replace(Regex("\\s*\\(.*?\\)\\s*"), "").trim()
     }
-//
 }
