@@ -13,11 +13,10 @@
         android:theme="@style/Theme.MixiVivu"
         tools:targetApi="31">
         <activity
-<<<<<<< HEAD
             android:name=".view.booking.OrderShipActivity"
-=======
+            android:exported="false" />
+        <activity
             android:name=".view.blog.DetailBlogActivity"
->>>>>>> feature/blog
             android:exported="false" />
         <activity
             android:name=".view.yacht.DetailYachtActivity"
