@@ -8,7 +8,7 @@ import com.emanh.mixivivu.R
 import com.emanh.mixivivu.databinding.ActivityMainBinding
 import com.emanh.mixivivu.databinding.ButtonBarItemBinding
 import com.emanh.mixivivu.model.ButtonBarItemModel
-import com.emanh.mixivivu.view.arilineTicket.ArilineTicketFragment
+import com.emanh.mixivivu.view.airlineTicket.AirlineTicketFragment
 import com.emanh.mixivivu.view.blog.BlogFragment
 import com.emanh.mixivivu.view.introduce.IntroduceFragment
 import com.emanh.mixivivu.view.yacht.YachtFragment
@@ -46,7 +46,7 @@ class MainActivity : BaseActivity() {
 
                 when (index) {
                     0 -> replaceFragment(YachtFragment())
-                    1 -> replaceFragment(ArilineTicketFragment())
+                    1 -> replaceFragment(AirlineTicketFragment())
                     2 -> replaceFragment(BlogFragment())
                     3 -> replaceFragment(IntroduceFragment())
                 }
