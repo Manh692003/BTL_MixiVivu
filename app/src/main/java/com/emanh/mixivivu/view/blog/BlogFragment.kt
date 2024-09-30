@@ -39,7 +39,7 @@ class BlogFragment : Fragment() {
         binding.progressBlog.visibility = View.VISIBLE
         viewModel.blog.observe(viewLifecycleOwner) {
             binding.listBlog.layoutManager = LinearLayoutManager(requireContext())
-//            binding.listBlog.adapter = BlogAdapter(it)
+            binding.listBlog.adapter = BlogAdapter(it)
             binding.progressBlog.visibility = View.GONE
         }
     }
