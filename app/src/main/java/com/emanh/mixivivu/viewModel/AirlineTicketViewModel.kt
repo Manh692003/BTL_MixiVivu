@@ -10,11 +10,11 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class PlaneViewModel : ViewModel() {
+class AirlineTicketViewModel : ViewModel() {
     private val firebaseDatabase = FirebaseDatabase.getInstance()
 
-    private val _plane = MutableLiveData<MutableList<AirlineTicketModel>>()
-    val plane: LiveData<MutableList<AirlineTicketModel>> get() = _plane
+    private val _airlineTicket = MutableLiveData<MutableList<AirlineTicketModel>>()
+    val airlineTicket: LiveData<MutableList<AirlineTicketModel>> get() = _airlineTicket
 
     fun loadPlane(inputStartingPoint: String, inputDestination: String) {
         val ref = firebaseDatabase.getReference("plane")
@@ -22,21 +22,20 @@ class PlaneViewModel : ViewModel() {
             override fun onDataChange(snapshot: DataSnapshot) {
                 val lists = mutableListOf<AirlineTicketModel>()
                 for (childSnapshot in snapshot.children) {
-                    val plane = childSnapshot.getValue(AirlineTicketModel::class.java)
-                    plane?.let {
+                    val airlineTicket = childSnapshot.getValue(AirlineTicketModel::class.java)
+                    airlineTicket?.let {
                         if (it.startingPoint.contains(inputStartingPoint, ignoreCase = true) &&
                             it.destination.contains(inputDestination, ignoreCase = true)) {
                             lists.add(it)
                         }
                     }
                 }
-                _plane.value = lists
+                _airlineTicket.value = lists
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.e("PlaneViewModel", "Lỗi khi lấy danh sách plane: ${error.message}")
+                Log.e("PlaneViewModel", "Lỗi khi lấy danh sách airlineTicket: ${error.message}")
             }
-
         })
     }
 }

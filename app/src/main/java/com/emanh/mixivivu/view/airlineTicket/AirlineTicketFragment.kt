@@ -14,7 +14,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.emanh.mixivivu.R
 import com.emanh.mixivivu.databinding.FragmentAirlineTicketBinding
-import com.emanh.mixivivu.viewModel.PlaneViewModel
+import com.emanh.mixivivu.viewModel.AirlineTicketViewModel
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
@@ -23,7 +23,7 @@ class AirlineTicketFragment : Fragment() {
     private var _binding: FragmentAirlineTicketBinding? = null
 
     private val binding get() = _binding!!
-    private val viewModel = PlaneViewModel()
+    private val viewModel = AirlineTicketViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -77,7 +77,7 @@ class AirlineTicketFragment : Fragment() {
 
         viewModel.loadPlane(newStartingPoint, newDestination)
         binding.progressPlane.visibility = View.VISIBLE
-        viewModel.plane.observe(viewLifecycleOwner) {
+        viewModel.airlineTicket.observe(viewLifecycleOwner) {
             binding.progressPlane.visibility = View.GONE
             if (it.isNullOrEmpty()) {
                 binding.noData.visibility = View.VISIBLE
@@ -86,7 +86,7 @@ class AirlineTicketFragment : Fragment() {
                 binding.noData.visibility = View.GONE
                 binding.listPlane.visibility = View.VISIBLE
                 binding.listPlane.layoutManager = LinearLayoutManager(requireContext())
-//                binding.listPlane.adapter = FlightAdapter(it, intent)
+                binding.listPlane.adapter = FlightAdapter(it, intent)
             }
         }
     }
