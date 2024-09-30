@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.blog.DetailBlogActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="36dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp">
+
+            <TextView
+                style="@style/textViewTitle"
+                android:id="@+id/title"
+                android:layout_marginTop="68dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                style="@style/textViewContent"
+                android:id="@+id/date"
+                android:layout_marginTop="8dp"
+                android:padding="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/bg_white_input2"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/heading_border"
+                app:layout_constraintTop_toBottomOf="@+id/date"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                style="@style/textViewContent"
+                android:id="@+id/intro"
+                android:layout_marginTop="16dp"
+                android:textStyle="italic"
+                android:justificationMode="inter_word"
+                android:lineSpacingExtra="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <FrameLayout
+                android:id="@+id/layoutPic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:padding="1dp"
+                android:background="@drawable/bg_white_pic_room"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/intro">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/picIntro"
+                    android:layout_width="match_parent"
+                    android:layout_height="224dp"
+                    android:scaleType="centerCrop"
+                    android:importantForAccessibility="no"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"/>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="24dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/layoutPic"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content1"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent1"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content2"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent2"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content3"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent3"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content4"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent4"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content5"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent5"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content6"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent6"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content7"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent7"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content8"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent8"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content9"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent9"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content10"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent10"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content11"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent11"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content12"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent12"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content13"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent13"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content14"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent14"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/content15"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    style="@style/picContentBlog"
+                    android:id="@+id/picContent15"
+                    android:visibility="gone"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize8Percent"/>
+
+                <TextView
+                    style="@style/textContentBlog"
+                    android:id="@+id/endContent"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        app:srcCompat="@drawable/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAccessibility="no"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
