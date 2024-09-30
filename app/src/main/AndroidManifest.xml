@@ -19,6 +19,9 @@
             android:name=".view.blog.DetailBlogActivity"
             android:exported="false" />
         <activity
+            android:name=".view.airlineTicket.OrderTicketActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.yacht.DetailYachtActivity"
             android:exported="false" />
         <activity

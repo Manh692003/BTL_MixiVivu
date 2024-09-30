@@ -3,6 +3,7 @@ package com.emanh.mixivivu.view.airlineTicket
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
@@ -78,6 +79,7 @@ class FlightAdapter(
         val sumChildren = dialogView.findViewById<TextView>(R.id.sumChildren)
         val sumBaby = dialogView.findViewById<TextView>(R.id.sumBaby)
         val sumPrice = dialogView.findViewById<TextView>(R.id.sumPrice)
+        val select = dialogView.findViewById<TextView>(R.id.select)
 
         val dateGo = intent.getStringExtra("DATE-GO")
         val adult = intent.getStringExtra("ADULT")?.toIntOrNull() ?: 0
@@ -108,6 +110,20 @@ class FlightAdapter(
         sumChildren.text = "$children trẻ em (giảm 10%): ${formatPrice(sumPriceChildren)} VNĐ"
         sumBaby.text = "$baby em bé (giảm 90%): ${formatPrice(sumPriceBaby)} VNĐ"
         sumPrice.text = "Tổng: ${formatPrice(sumPriceAdult + sumPriceChildren + sumPriceBaby)} VNĐ"
+
+        select.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putInt("key_sumPrice", sumPriceAdult + sumPriceChildren + sumPriceBaby)
+            bundle.putString("key_airline", items[position].airline)
+            bundle.putString("key_seatClass", items[position].seatClass)
+            bundle.putString("key_takeOffTime", "$dateGo ${items[position].takeOffTime}")
+            bundle.putString("key_timeline",
+                Duration.between(takeOff, landing).toMinutes().toString()
+            )
+            val intent = Intent(holder.itemView.context, OrderTicketActivity::class.java)
+            intent.putExtras(bundle)
+            holder.itemView.context.startActivity(intent)
+        }
 
         dialog.show()
     }
