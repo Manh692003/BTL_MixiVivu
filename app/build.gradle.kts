@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
@@ -38,6 +40,10 @@ android {
         viewBinding = true
         true.also { dataBinding = it }
     }
+    packagingOptions {
+        exclude("META-INF/NOTICE.md")
+        exclude("META-INF/LICENSE.md")
+    }
 }
 
 dependencies {
@@ -54,4 +60,7 @@ dependencies {
     implementation(libs.bundles.lifecycleLibs)
     implementation(libs.bundles.activityLibs)
     implementation(libs.bundles.comLibs)
+
+    implementation(libs.com.android.mail)
+    implementation(libs.com.android.activation)
 }
