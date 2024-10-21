@@ -1,3 +1,105 @@
 <resources>
     <string name="app_name">MixiVivu</string>
+    <string name="text_ship_intro">Bạn lựa chọn du thuyền nào đi Hạ Long</string>
+    <string name="text_ship_tour">Hơn 100 tour du thuyền đang chờ bạn</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="input_ship">Nhập tên du thuyền</string>
+    <string name="info_ship">Thông tin du thuyền</string>
+    <string name="characteristic">Đặc điểm</string>
+    <string name="price_room">Giá phòng</string>
+    <string name="intro">Giới thiệu</string>
+    <string name="evaluation">Đánh giá</string>
+    <string-array name="filterDestination">
+        <item>Tất cả địa điểm</item>
+        <item>Vịnh Hạ Long</item>
+        <item>Vịnh Lan Hạ</item>
+        <item>Đảo Cát Bà</item>
+    </string-array>
+    <string-array name="filterPrice">
+        <item>Tất cả mức giá</item>
+        <item>Từ 1tr đến 3tr</item>
+        <item>Từ 3tr đến 6tr</item>
+        <item>Trên 6tr</item>
+    </string-array>
+    <string name="highlights">Đặc điểm nổi bật</string>
+    <string name="intro_ship">Giới thiệu về du thuyền</string>
+    <string name="room_and_price"><![CDATA[Các loại phòng & giá]]></string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="input_your_name">Nhập họ và tên</string>
+    <string name="input_your_review">Nhập đánh giá của bạn</string>
+    <string name="send_reviews">Gửi đánh giá</string>
+    <string name="text_view_review_service">Đánh giá của bạn về chất lượng dịch vụ</string>
+    <string name="text_view_reviews_user">Những đánh giá của khách hàng khác</string>
+    <string name="rating">Chất lượng:</string>
+    <string name="zero">00</string>
+    <string name="sum_price">Tổng tiền</string>
+    <string name="order">Đặt ngay</string>
+    <string name="select_room">Chọn phòng</string>
+    <string name="order_ship">Đặt du thuyền</string>
+    <string name="input_number_phone">Nhập số điện thoại</string>
+    <string name="input_email">Nhập địa chỉ email</string>
+    <string name="input_date">Ngày nhập phòng</string>
+    <string name="input_your_request">Nhập yêu cầu của bạn</string>
+    <string name="content_confirm">Xác nhận đặt phòng của bạn, chúng tôi sẽ sớm liên hệ với bạn.</string>
+    <string name="content_confirm2">Xác nhận đặt vé máy bay của bạn, chúng tôi sẽ sớm liên hệ với bạn.</string>
+    <string name="confirm_booking">Xác nhận đặt phòng</string>
+    <string name="confirm_ticket">Xác nhận đặt vé máy bay</string>
+    <string name="complete_ticket">Hoàn tất đặt vé máy bay</string>
+    <string name="complete_booking">Hoàn tất đặt phòng</string>
+    <string name="no_ship">Không có du thuyền nào</string>
+    <string name="into_plane">Mở cánh cửa khám phá cùng Mixivivu</string>
+    <string name="intro_plane1">Mixivivu - Đặt chân lên đỉnh mây với một bước nhảy</string>
+    <string name="one_way">Một chiều</string>
+    <string name="round_trip">Khứ hồi</string>
+    <string name="destination">Điểm đến</string>
+    <string name="starting_point">Điểm đi</string>
+    <string name="date_go">Ngày đi</string>
+    <string name="adult">Người lớn</string>
+    <string name="children">Trẻ em</string>
+    <string name="baby">Em bé</string>
+    <string name="search_plane">Tìm chuyến bay</string>
+    <string name="no_plane">Không có chuyến bay nào</string>
+    <string name="intro_blog">Hạ Long: Khám phá Sự đặc sắc và Cập nhật tin tức mới nhất</string>
+    <string name="intro_content_blog">Hạ Long: Bí mật và Cuộc sống trong Vịnh - Khám phá và Cập nhật những tin tức hấp dẫn từ điểm đến tuyệt vời này.</string>
+    <string name="enterprise_title">Mixivivu - Tour Du thuyền Hạ Long: Kết nối doanh nghiệp, khám phá vẻ đẹp tự nhiên</string>
+    <string name="enterprise_intro">Với sự trải nghiệm thực tế, Công ty TNHH Du lịch và Dịch vụ MixiVivu mong muốn đưa du thuyền Hạ Long trở thành một lựa chọn đầu tiên cho doanh nghiệp. Nhiều chương trình du lịch hấp dẫn, đa dạng được kết hợp sẽ đem đến cho quý doanh nghiệp sự hài lòng và thuận tiện. Du thuyền Hạ Long cũng sẽ là một món quà tri ân vô cùng ý nghĩa dành cho nhân viên của quý doanh nghiệp. Bên cạnh đó, du thuyền Hạ Long còn rất phù hợp cho những cuộc hội thảo, hợp tác đầu tư hay giao lưu của quý doanh nghiệp.</string>
+    <string name="mixi_phone">0922222222</string>
+    <string name="about_me">Giới thiệu về chúng tôi</string>
+    <string name="rules">Điều khoản và điều kiện</string>
+    <string name="privacy_policy">Chính sách riêng tư</string>
+    <string name="user_manual">Hướng dẫn sử dụng</string>
+    <string name="mixi_email">info@mixivivu.com</string>
+    <string name="warning">Ứng dụng chỉ là một sản phẩm demo, không có mục địch mạo danh doanh nghiệp</string>
+    <string name="start">Bắt đầu</string>
+    <string name="select">Chọn</string>
+    <string-array name="filterCity">
+        <item>Sân bay Chu Lai (Quảng Nam)</item>
+        <item>Sân bay Thọ Xuân (Thanh Hóa)</item>
+        <item>Sân bay Đồng Hới (Quảng Bình)</item>
+        <item>Sân bay Điện Biên Phủ (Điện Biên)</item>
+        <item>Sân bay Tuy Hòa (Phú Yên)</item>
+        <item>Sân bay Pleiku (Gia Lai)</item>
+        <item>Sân bay Buôn Mê Thuột (Đắk Lắk)</item>
+        <item>Sân bay Rạch Giá (Kiên Giang)</item>
+        <item>Sân bay Cà Mau (Cà Mau)</item>
+        <item>Sân bay Côn Đảo (Bà Rịa – Vũng Tàu)</item>
+        <item>Sân bay Nội Bài (Hà Nội)</item>
+        <item>Sân bay Tân Sơn Nhất (TP. Hồ Chí Minh)</item>
+        <item>Sân bay Phú Quốc (Kiên Giang)</item>
+        <item>Sân bay Đà Nẵng (Đà Nẵng)</item>
+        <item>Sân bay Cam Ranh (Khánh Hòa)</item>
+        <item>Sân bay Phú Bài (Thừa Thiên Huế)</item>
+        <item>Sân bay Vân Đồn (Quảng Ninh)</item>
+        <item>Sân bay Cần Thơ (Cần Thơ)</item>
+        <item>Sân bay Vinh (Nghệ An)</item>
+        <item>Sân bay Phù Cát (Bình Định)</item>
+        <item>Sân bay Cát Bi (Hải Phòng)</item>
+        <item>Sân bay Liên Khương (Lâm Đồng)</item>
+        <item>Sân bay Long Thành (Đồng Nai)</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="order_airline_ticket">Đặt vé máy bay</string>
+    <string name="select_flight_date">Chọn ngày bay</string>
 </resources>

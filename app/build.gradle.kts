@@ -1,6 +1,10 @@
+@file:Suppress("DEPRECATION")
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("com.google.gms.google-services")
+    id("kotlin-android")
 }
 
 android {
@@ -33,6 +37,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+        true.also { dataBinding = it }
+    }
+    packagingOptions {
+        exclude("META-INF/NOTICE.md")
+        exclude("META-INF/LICENSE.md")
+    }
 }
 
 dependencies {
@@ -40,9 +52,23 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
-    implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    implementation(libs.bundles.lifecycleLibs)
+    implementation(libs.bundles.activityLibs)
+    implementation(libs.bundles.comLibs)
+
+    implementation(libs.com.android.mail)
+    implementation(libs.com.android.activation)
+
+    testImplementation(libs.org.mockito.android)
+    androidTestImplementation(libs.org.mockito.android)
+    implementation(libs.org.mockito.kotlin)
+    implementation(libs.androidx.core.testing)
+    implementation(libs.androidx.fragment.testing)
+    implementation(libs.com.firebase.database.ktx)
 }
