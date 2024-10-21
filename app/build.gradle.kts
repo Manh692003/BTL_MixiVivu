@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
     id("com.google.gms.google-services")
+    id("kotlin-android")
 }
 
 android {
@@ -63,4 +64,11 @@ dependencies {
 
     implementation(libs.com.android.mail)
     implementation(libs.com.android.activation)
+
+    testImplementation(libs.org.mockito.android)
+    androidTestImplementation(libs.org.mockito.android)
+    implementation(libs.org.mockito.kotlin)
+    implementation(libs.androidx.core.testing)
+    implementation(libs.androidx.fragment.testing)
+    implementation(libs.com.firebase.database.ktx)
 }
