@@ -19,6 +19,9 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
+import java.time.temporal.ChronoUnit
 import java.util.Calendar
 import java.util.Locale
 
@@ -54,14 +57,24 @@ class OrderShipActivity : BaseActivity() {
             showDatePickerDialog(binding.inputDate)
         }
 
+        binding.inputDateOut.setOnClickListener {
+            showDatePickerDialog(binding.inputDateOut)
+        }
+
         binding.orderShip.setOnClickListener {
             if (validate()) {
                 val username = binding.inputYourName.text.toString()
                 val emailRegister = binding.inputYourEmail.text.toString()
                 val phoneNumber = binding.inputNumberPhone.text.toString()
-                val price = binding.sumPrice.text.toString()
+                val checkIn = binding.inputDate.text.toString()
+                val checkOut = binding.inputDateOut.text.toString()
+                val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+                val checkInDate = LocalDate.parse(checkIn, formatter)
+                val checkOutDate = LocalDate.parse(checkOut, formatter)
+                val numberOfDays = ChronoUnit.DAYS.between(checkInDate, checkOutDate) + 1
+                val price = "${formatPrice((sumPrice * numberOfDays).toInt())} đ"
 
-                roomViewModel.sendEmail(username, emailRegister, phoneNumber, price)
+                roomViewModel.sendEmail(username, emailRegister, phoneNumber, price, checkIn, checkOut, numberOfDays)
                 completeOrderRoom()
             }
         }
@@ -76,6 +89,7 @@ class OrderShipActivity : BaseActivity() {
         val numberPhone = binding.inputNumberPhone.text.toString()
         val email = binding.inputYourEmail.text.toString()
         val dateStr = binding.inputDate.text.toString()
+        val dateOutStr = binding.inputDateOut.text.toString()
         val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
         val currentDate = Calendar.getInstance().time
 
@@ -115,11 +129,27 @@ class OrderShipActivity : BaseActivity() {
             return false
         }
 
+        if (dateOutStr.isEmpty()) {
+            binding.inputDateOut.error = "Ngày trả phòng không được để trống"
+            "Vui lòng cung cấp ngày trả phòng của bạn".toast()
+            return false
+        }
+
         val selectedDate = dateFormat.parse(dateStr)
         if (selectedDate != null) {
             if (selectedDate.before(currentDate)) {
                 binding.inputDate.error = "Lỗi nhập ngày nhận phòng"
                 "Ngày nhận phòng không được nhỏ hơn ngày hiện tại".toast()
+                return false
+            }
+        }
+
+        val checkInDate = dateFormat.parse(dateStr)
+        val checkOutDate = dateFormat.parse(dateOutStr)
+        if (checkOutDate != null) {
+            if (checkOutDate.before(checkInDate) || checkOutDate.equals(checkInDate)) {
+                binding.inputDateOut.error = "Lỗi nhập ngày trả phòng"
+                "Ngày trả phòng không được nhỏ hơn ngày hiện tại".toast()
                 return false
             }
         }

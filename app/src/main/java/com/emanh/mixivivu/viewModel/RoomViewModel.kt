@@ -47,7 +47,7 @@ class RoomViewModel : ViewModel() {
         })
     }
 
-    fun sendEmail(username: String, receiverEmail: String, phoneNumber: String, price: String) {
+    fun sendEmail(username: String, receiverEmail: String, phoneNumber: String, price: String, checkIn: String, checkOut: String, countDate: Long) {
         CoroutineScope(Dispatchers.IO).launch {
             val senderEmail = "phankhacmanh6903@gmail.com"
             val senderPassword = "kejx grwa fwxx zkcj"
@@ -73,6 +73,7 @@ class RoomViewModel : ViewModel() {
                     subject = "Xác nhận thông tin đặt phòng MixiVivu"
                     setText("Chúng tôi nhận được thông tin đặt phòng từ khách hàng $username với tài khoản email là: $receiverEmail." +
                             "\nXác nhận đặt phòng du thuyền thông qua số điện thoại $phoneNumber với số tiền là $price VNĐ." +
+                            "\nNhận phòng vào ngày $checkIn đến ngày $checkOut (tổng $countDate ngày đêm)" +
                             "\n\nThông tin thanh toán đặt phòng du thuyền qua số tài khoản: 0394817283 - BIDV - MixiVivu." +
                             "\nMọi thắng mắc xin liên hệ đến số điện thoại: 0394817283." +
                             "\n\n-----------------------------" +

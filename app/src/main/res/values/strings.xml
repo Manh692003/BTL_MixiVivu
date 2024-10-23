@@ -39,7 +39,7 @@
     <string name="order_ship">Đặt du thuyền</string>
     <string name="input_number_phone">Nhập số điện thoại</string>
     <string name="input_email">Nhập địa chỉ email</string>
-    <string name="input_date">Ngày nhập phòng</string>
+    <string name="input_date">Ngày nhận phòng</string>
     <string name="input_your_request">Nhập yêu cầu của bạn</string>
     <string name="content_confirm">Xác nhận đặt phòng của bạn, chúng tôi sẽ sớm liên hệ với bạn.</string>
     <string name="content_confirm2">Xác nhận đặt vé máy bay của bạn, chúng tôi sẽ sớm liên hệ với bạn.</string>
@@ -102,4 +102,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="order_airline_ticket">Đặt vé máy bay</string>
     <string name="select_flight_date">Chọn ngày bay</string>
+    <string name="input_out_room">Ngày trả phòng</string>
 </resources>

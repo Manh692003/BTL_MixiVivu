@@ -55,6 +55,17 @@
 
         <EditText
             style="@style/editText"
+            android:id="@+id/inputDateOut"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_white_input1"
+            android:hint="@string/input_out_room"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="true"
+            android:importantForAutofill="no"/>
+
+        <EditText
+            style="@style/editText"
             android:id="@+id/inputContentReview"
             android:layout_height="130dp"
             android:layout_marginTop="16dp"
