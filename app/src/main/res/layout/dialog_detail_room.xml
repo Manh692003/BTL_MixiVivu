@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog1">
+
+    <LinearLayout
+        android:id="@+id/layoutPicMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="1dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/bg_white_pic_room"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/picUrl"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:importantForAccessibility="no"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/bg_light_grey1"
+            android:clipToPadding="false"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/textViewTitle"
+        android:id="@+id/title"
+        android:layout_marginTop="16dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPicMain"/>
+
+    <LinearLayout
+        android:id="@+id/layoutRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:srcCompat="@drawable/bed"
+            app:tint="@color/darkBlue"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            style="@style/textViewContentBold"
+            android:id="@+id/area"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            style="@style/textViewContentBold"
+            android:id="@+id/capacity"
+            android:layout_marginStart="16dp"/>
+
+        <ImageView
+            android:id="@+id/people"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="4dp"
+            app:srcCompat="@drawable/user"
+            app:tint="@color/darkBlue"
+            tools:ignore="ContentDescription" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listDetailRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:clipToPadding="false"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        app:layout_constraintTop_toBottomOf="@+id/layoutRoom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/listDetailRoom"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layoutQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:padding="4dp"
+            android:background="@drawable/bg_dark_blue2"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/buttonWhite"
+                android:id="@+id/minus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="@string/minus"/>
+
+            <TextView
+                style="@style/textViewTitle"
+                android:id="@+id/quantity"
+                android:layout_width="40dp"
+                android:text="@string/zero"
+                android:textAlignment="center"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/buttonWhite"
+                android:id="@+id/plus"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:text="@string/plus" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/buttonLightBlue"
+            android:id="@+id/orderShip"
+            android:layout_height="43dp"
+            android:layout_margin="16dp"
+            android:text="@string/select_room"
+            app:layout_constraintStart_toEndOf="@+id/layoutQuantity"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

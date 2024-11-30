@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "814961744836",
+    "firebase_url": "https://mixivivu-5f875-default-rtdb.firebaseio.com",
+    "project_id": "mixivivu-5f875",
+    "storage_bucket": "mixivivu-5f875.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814961744836:android:ece8b9e9cfb4764214e291",
+        "android_client_info": {
+          "package_name": "com.emanh.adminmixivivu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfeR9yDnNBaOoylhpZ9w4e_WPLaMhGYvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814961744836:android:1b2a438ccee2674f14e291",
+        "android_client_info": {
+          "package_name": "com.emanh.mixivivu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfeR9yDnNBaOoylhpZ9w4e_WPLaMhGYvE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
